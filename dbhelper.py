@@ -27,8 +27,8 @@ class DBHelper:
             with connection.cursor() as cursor:
                 cursor.execute(query)
                 connection.commit()
-            finally:
-                connection.close()
+        finally:
+            connection.close()
 
     def clear_all(self):
         connection = self.connect()
@@ -37,5 +37,5 @@ class DBHelper:
             with connection.cursor() as cursor:
                 cursor.execute(query)
                 connection.commit()
-            finally:
-                connection.close()
+        finally:
+            connection.close()
